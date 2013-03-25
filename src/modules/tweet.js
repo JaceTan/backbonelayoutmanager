@@ -8,20 +8,6 @@
 			return "http://search.twitter.com/search.json?q=twitterapi&callback=?";
 			//return "http://kpi.ericsson.localhost/processed.json?format=json";
 		},
-		// override backbone synch to force a jsonp call
-		sync: function(method, model, options) {
-			// Default JSON-request options.
-			var params = _.extend({
-			  type:         'GET',
-			  dataType:     'jsonp',
-			  url:		this.url(),
-			  jsonp: "callback",   // the api requires the jsonp callback name to be this exact name
-			  processData:  false
-			}, options);
-	 
-			// Make the request.
-			return $.ajax(params);
-		},
 
 		parse: function(data) {
 			return data.results;
