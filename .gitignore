@@ -1,2 +1,11 @@
+<<<<<<< HEAD
 #this ignores the Sublime project files
 *sublime*
+=======
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+>>>>>>> 149b958f3528208a493acb5fdfde271435da616d
