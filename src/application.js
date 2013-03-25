@@ -43,7 +43,7 @@ jQuery(function($){
 			var tweets = new Tweet.Collection();
 			console.log(tweets);
 			// Fetch new tweets
-			tweets.fetch().success(function() {
+			tweets.fetch({dataType: 'jsonp'}).success(function() {
 				console.log("Fetching...");
 				// Assemble the layout
 				var list = main.views[".list"] = new Tweet.Views.List({ collection: tweets});
